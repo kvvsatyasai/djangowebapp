@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            box-sizing: border-box;
+        }
+        .navbar {
+            width: 100%;
+            background-color: #007bff;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 60px; /* Added margin to prevent overlap with navbar */
+        }
+        .boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+        }
+        .box {
+            flex: 1 1 calc(20% - 20px); /* 5 boxes in one row with 20px gap */
+            max-width: 250px;
+            height: 250px;
+            background-color: #ffffff;
+            border: 2px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+        }
+        .button-container {
+            position: absolute;
+            bottom: 14px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            white-space: nowrap; /* Prevent button text from wrapping */
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+        .welcome-message {
+            font-size: 16px;
+            text-align: center;
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="boxes">
+            <div class="box">
+                <div class="button-container">
+                   <a href="signin"> <button>Edit Photo</button></a>
+                </div>
+                <div class="welcome-message">
+                    Click on below Button to edit your images.
+                </div>
+            </div>
+            <div class="box">
+                <div class="button-container">
+                  <a href="signin">  <button>PDF's Converter</button></a>
+                </div>
+                <div class="welcome-message">
+                    Click on below Button to edit your documents.
+                </div>
+            </div>
+            <div class="box">
+                <div class="button-container">
+                  <a href="signin">  <button>URL's Shortener</button></a>
+                </div>
+                <div class="welcome-message">
+                    Click on below Button to shorten your URL.
+                </div>
+            </div>
+            <div class="box">
+                <div class="button-container">
+                 <a href="signin">   <button>NULL</button></a>
+                </div>
+                <div class="welcome-message">
+                    Click on below Button to edit your images.
+                </div>
+            </div>
+            <div class="box">
+                <div class="button-container">
+                 <a href="signin">   <button>NULL</button></a>
+                </div>
+                <div class="welcome-message">
+                    Click on below Button to edit your images.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
